@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import { FiExternalLink, FiGithub, FiArrowRight } from 'react-icons/fi';
 import { portfolioData } from '../../data/portfolioData';
 
 const Projects = () => {
@@ -79,32 +80,44 @@ const Projects = () => {
                 </div>
 
                 <div className="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-gray-700">
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+                  {project.id === 'microservices-platform' ? (
+                    <Link
+                      to="/projects/enterprise-microservices"
+                      className="flex items-center gap-2 text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors font-semibold"
                     >
-                      <FiExternalLink />
-                      View Project
-                    </a>
-                  )}
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
-                    >
-                      <FiGithub />
-                      Code
-                    </a>
-                  )}
-                  {!project.link && !project.github && (
-                    <span className="text-sm text-gray-500 dark:text-gray-500">
-                      Enterprise Project
-                    </span>
+                      <FiArrowRight />
+                      View Details
+                    </Link>
+                  ) : (
+                    <>
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
+                        >
+                          <FiExternalLink />
+                          View Project
+                        </a>
+                      )}
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+                        >
+                          <FiGithub />
+                          Code
+                        </a>
+                      )}
+                      {!project.link && !project.github && (
+                        <span className="text-sm text-gray-500 dark:text-gray-500">
+                          Enterprise Project
+                        </span>
+                      )}
+                    </>
                   )}
                 </div>
               </div>
