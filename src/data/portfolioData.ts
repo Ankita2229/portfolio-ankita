@@ -178,6 +178,22 @@ export const portfolioData = {
       github: undefined,
     },
     {
+      id: "ai-market-intelligence",
+      title: "AI-Powered Market Intelligence Platform",
+      description: "Enterprise-grade web crawling and AI analysis platform processing 10TB+ daily data from 500+ sources with 95% ML accuracy for competitive intelligence and market insights.",
+      image: "/images/ai-market-intelligence.jpg",
+      technologies: ["Python", "Scrapy", "Playwright", "Apache Spark", "TensorFlow", "Elasticsearch", "AWS"],
+      achievements: [
+        "10TB+ daily data processing across 500+ sources",
+        "95% ML accuracy in content classification",
+        "99.9% platform uptime with enterprise SLA",
+        "$5M+ annual cost savings for clients",
+      ],
+      featured: true,
+      link: undefined,
+      github: undefined,
+    },
+    {
       id: "ai-data-extraction",
       title: "AI-Powered Data Extraction System",
       description: "Integrated cutting-edge LLMs for automated extraction and validation of semi-structured data with human-in-the-loop validation.",

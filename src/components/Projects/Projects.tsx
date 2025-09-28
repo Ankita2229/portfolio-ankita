@@ -88,6 +88,14 @@ const Projects = () => {
                       <FiArrowRight />
                       View Details
                     </Link>
+                  ) : project.id === 'ai-market-intelligence' ? (
+                    <Link
+                      to="/projects/ai-market-intelligence"
+                      className="flex items-center gap-2 text-sm text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors font-semibold"
+                    >
+                      <FiArrowRight />
+                      View Details
+                    </Link>
                   ) : (
                     <>
                       {project.link && (
